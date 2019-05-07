@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-int maxmin(int n, int *pmax, int *pmin){
+void maxmin(int n, int *pmax, int *pmin){
     int i, num;
     printf("Digite o primeiro numero:");
     scanf("%d", pmax);
