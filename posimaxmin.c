@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int funPosmaxmin(int a, int b, int c, int *pmax, int *pmin){
+void funPosmaxmin(int a, int b, int c, int *pmax, int *pmin){
     if(a>b && a>c){
         *pmax=1;
     }else if(a<b && a<c){
