@@ -1,21 +1,24 @@
 #include <stdio.h>
 
 void funPosmaxmin(int a, int b, int c, int *pmax, int *pmin){
-    if(a>b && a>c){
+    if(a>b && a>c)
+    {
         *pmax=1;
-    }else if(a<b && a<c){
-        *pmin=1; 
-    } 
-    if(b>a && b>c){
-        *pmax=2;
-    }else if(b<a && b<c){
-        *pmin=2;
+        if(b<c) *pmin=2;
+        else *pmin=3;
     }
-    if(c>a && c>b){
-       *pmax=3; 
-    }else if(c<a && c<b){
-       *pmin=3; 
-    }else ;  
+    else if(b>a && b>c) 
+    {
+        *pmax=2;
+        if(a<c) *pmin=1;
+        else *pmin=3;
+    }
+    else 
+    {
+        *pmax=3;
+        if(a<b) *pmin=1;
+        else *pmin=2;
+    }
     return ;
 }
 
