@@ -4,9 +4,10 @@ a entrada do número. Ex: 234 saída: quatro três dois.
 
 #include<stdio.h>
 
-void funcprint(int n)
+void funcPrint(int n)
 {
-  if(n==1) printf("um");
+  if(n==0) printf("zero");
+  else if(n==1) printf(“ um “);
   else if(n==2) printf(" dois ");
   else if(n==3) printf(" tres ");
   else if(n==4) printf(" quatro ");
@@ -18,12 +19,21 @@ void funcprint(int n)
   return ;
 }
 
+void funcC(n, *pcent, *pdez, *puni)
+{
+   *pcent=(num%100)%10;
+   *pdez=(num%100)/10;
+   *puni=num/10;
+   return ;
+}
+
 int main()
 {
-  int n;
+  int n, cent, dez, uni;
   printf("Digite um numero inteiro de 3 algarismos(exemplo:234):");
   scanf("%d", &n);
-  funcprint(n -(centena + dezena));
-  funcprint((n - centena) / 10);
-  funcprint(n / 100);
+  funcC(n, &cent, &dez, &uni);
+  funcPrint(cent);
+  funcPrint(dez);
+  funcPrint(uni);
 }
