@@ -2,7 +2,7 @@
 
 int main()
 {
-  int n, i;
+  int n, i, cont=0;
   float notas[50], media=0;
   printf("Digite a quantidade de notas a serem informadas:");
   scanf("%d", &n);
@@ -19,5 +19,5 @@ int main()
     cont++;
   }
   }
-  printf
+  printf("\n O total de notas maiores que a media foi de %d alunos");
 }
