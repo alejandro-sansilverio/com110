@@ -1,8 +1,9 @@
 #include<stdio.h>
 
+int i;
+
 void preencheVet(int vet[])
 {
-  int i;
   for(i=0;i<30;i++)
   {
     printf("Digite o %d numero:", i+1);
@@ -13,7 +14,7 @@ void preencheVet(int vet[])
 
 int somaInter(int vet[], int x, int y)
 {
-  int i, soma=0;
+  int soma=0;
   for(i=x;i<=y;i++)
   {
    soma = soma + vet[i]; 
