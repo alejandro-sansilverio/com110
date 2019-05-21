@@ -1,8 +1,9 @@
 #include<stdio.h>
 
+int i;
+
 void preenchevetor(int numeros[])
 {
-  int i;
   for(i=0;i<10;i++)
   {
     printf("Digite o %d valor:", i+1);
@@ -13,7 +14,6 @@ void preenchevetor(int numeros[])
 
 void somaPares(*psoma, numeros[])
 {
-  int i;
   for(i=0;i<10;i++)
   {
     if(numeros[i]%2==0) *psoma = *psoma + numeros[i];
