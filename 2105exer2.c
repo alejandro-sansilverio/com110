@@ -1,8 +1,9 @@
 #include<stdio.h>
 
+int i;
+
 void preencheVetor(int vet[], int a)
 {
-  int i;
   for(i=0;i<a;i++)
   {
     printf("Digite o %d valor", i+1);
@@ -13,7 +14,6 @@ void preencheVetor(int vet[], int a)
 
 void quantParImpar(int vet[], int *pp, int *pim, int n)
 {
-  int i;
   for(i=0; i<n; i++)
   {
     if(vet[i]%2==0) *pp++;
