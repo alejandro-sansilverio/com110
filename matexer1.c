@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void preenchemat(int mat[][])
+void preenchemat(int mat[][8])
 {
   int l, c;
   for(l=0;l<5;l++)
@@ -14,7 +14,7 @@ void preenchemat(int mat[][])
   return;
 }
 
-void imprime(int mat[][])
+void imprime(int mat[][8])
 {
   int l, c;
   for(l=0;l<5;l++)
