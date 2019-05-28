@@ -17,17 +17,16 @@ void preencheMat(int mat[][5], int n)
 
 void multiplicaMat(int A[][5], int B[][5], int R[][5])
 {
-  int linha=0, k;
+  int k;
   for(l=0;l<5;l++)
   {
     for(c=0;c<5;c++)
     {
+      R[l][c] = 0;
       for(k=0;k<5;k++)
       {
-        linha = linha + A[l][k] * B[k][c];
+        R[l][c] = R[l][c] + A[l][k] * B[k][c];
       }
-      R[l][c] = linha;
-      linha=0;
     }
   }
   return;
