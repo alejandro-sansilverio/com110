@@ -15,26 +15,41 @@ void preencheMat(int mat[][5], int n)
    return;
 }
 
-int func(int A[][5], int B[][5])
+void multiplicaMat(int A[][5], int B[][5], int *pR[][5])
 {
-  
-}
-
-multiplicaMat(int A[][5], int B[][5])
-{
+  int linha=0, k;
   for(l=0;l<5;l++)
   {
     for(c=0;c<5;c++)
     {
-      R[l][c] = A[][]
+      for(k=0;k<5;k++)
+      {
+        linha = linha + A[l][k] * B[k][c];
+      }
+      *pR[l][c] = linha;
+      linha=0;
     }
+  }
+  return;
+}
+
+void imprime(int vet[][5])
+{
+  for(l=0;l<5;l++)
+  {
+   for(c=0;c<5;c++)
+   {
+      printf("%d ", vet[l][c]); 
+   }
+    printf("\n");
   }
 }
 
 int main()
 {
-  int A[5][5], B[5][5];
+  int A[5][5], B[5][5], R[5][5];
   preencheMat(A, 5);
   preencheMat(B, 5);
-  multiplicaMat(A, B);
+  multiplicaMat(A, B, &R);
+  imprime(R);
 }
