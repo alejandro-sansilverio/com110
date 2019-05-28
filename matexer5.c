@@ -17,18 +17,23 @@ void preenchermat(int A[][10], int n)
 
 int funcMaxmin(int A[][10], int n)
 {
-  int maxmin, i;
+  int maxmin, i, vet[2];
+  vet[0]=0;
+  vet[1]=0;
   for(l=0;l<n;l++)
   {
     for(c=1;c<n;c++)
     {
-      if(A[l][c]>A[l][c-1]) i=l;//Esta pegando o maior de cada linha e atribuindo a linha a i
+      if(A[l][c]>A[l][c-1]&&A[l][c]>A[vet[0]][vet[1]]) {
+        vet[0]= l;//Esta pegando o maior de cada linha e atribuindo a linha a i
+      vet[1]=c;
+      }
       else;
     }
   }
     for(c=1;c<n;c++)
     {
-      if(A[i][c]>A[i][c-1]) maxmin = A[i][c];
+      if(A[vet[0]][c]>A[vet[0]][c-1]) maxmin = A[vet[0]][c-1];
       else;
     }
   return maxmin;
@@ -48,3 +53,4 @@ int main()
   preenchermat(A, M);
   printf("O elemento maxmin da matriz eh %d ", funcMaxmin(A, M));
 }
+
