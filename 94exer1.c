@@ -1,17 +1,17 @@
 #include<stdio.h>
 #include<string.h>
 
-void func(char cadeia[], char c, char verifica[])
+int func(char cadeia[], char c)
 {
   int i, n=0;
   for(i=0;i<strlen(cadeia);i++)
   {
     if(cadeia[i]==c)
     {
-      strcpy(verifica[n], cadeia[i]);
+     n++;
     }else;
   }
-  return;
+  return n;
 }
 
 int main()
@@ -21,6 +21,5 @@ int main()
   scanf(" %s", cadeia);
   printf("Digite o caracter a ser verificado:");
   scanf(" %c", &c);
-  func(cadeia, c, verifica);
-  printf("O numero de vezes que a letra %c aparece eh de %d vezes", c, strlen(verifica));
+  printf("O numero de vezes que a letra %c aparece eh de %d vezes", c, func(cadeia, c));
 }
