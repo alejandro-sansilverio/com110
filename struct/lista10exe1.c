@@ -16,8 +16,7 @@ int main()
   //coletando dados do usuário//
   
   printf("Digite o nome do aluno:");
-  scanf("%s", &aluno.nome);
-  printf("%s", aluno.nome);
+  scanf(" %[^\n]s", &aluno.nome);
   printf("Digite o numero de matricula do aluno:");
   scanf("%d", &aluno.matricula);
   printf("Digite o codigo do curso:");
@@ -27,7 +26,11 @@ int main()
   
   //Mostrando os dados na tela//
   
-  printf("O numero de matricula do aluno eh %d", aluno.matricula);
-  printf("O codigo do curso do aluno eh %d", aluno.codc);
-  printf("O rendimento academico do aluno eh %f", aluno.renda); 
+  printf("%s", aluno.nome);
+  printf("O numero de matricula do aluno eh %d\n", aluno.matricula);
+  printf("O codigo do curso do aluno eh %d\n", aluno.codc);
+  printf("O rendimento academico do aluno eh %f\n", aluno.renda);
+  
+  if(strcmp(aluno.nome,"João Jose da Silva")==0) printf("O numero de matricula do aluno eh %d\n", aluno.matricula);
+  else printf("Aluno nao encontrado!\n");
 }
